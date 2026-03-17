@@ -1,99 +1,60 @@
 c ============================================================
 c  BAHAUSHE Keyboard for Keyman
-c  Maps Latin Hausa input → BAHAUSHE PUA codepoints (U+E000–U+E029)
-c  Version: 1.0
-c  Target: Android (touch) + Desktop
 c ============================================================
 
 store(&VERSION)    "10.0"
 store(&NAME)       "BAHAUSHE"
 store(&COPYRIGHT)  "(c) BAHAUSHE Project"
 store(&TARGETS)    "any"
-store(&LAYOUTFILE) "bahaushe.keyman-touch-layout"
-store(&FONTNAME)   "BAHAUSHE"
-store(&FONTSOURCE) "BAHAUSHE.otf"
 
 begin Unicode > use(main)
 
 group(main) using keys
 
-c ============================================================
-c  DIGRAPH COMPLETION RULES
-c  These fire when the previous output char is a single-consonant
-c  glyph, and the next key pressed completes a digraph.
-c  Order matters — must come before single-char rules.
-c ============================================================
-
-c  s  + h  →  sh   (U+E001 + h → U+E016)
+c DIGRAPH COMPLETION RULES
 U+E001 + "h" > U+E016
-
-c  t  + s  →  ts   (U+E00C + s → U+E013)
 U+E00C + "s" > U+E013
-
-c  k  + y  →  ky   (U+E00A + y → U+E00E)
 U+E00A + "y" > U+E00E
-
-c  k  + w  →  kw   (U+E00A + w → U+E010)
 U+E00A + "w" > U+E010
-
-c  g  + y  →  gy   (U+E005 + y → U+E017)
 U+E005 + "y" > U+E017
-
-c  g  + w  →  gw   (U+E005 + w → U+E01E)
 U+E005 + "w" > U+E01E
-
-c  ƙ  + w  →  ƙw   (U+E004 + w → U+E019)
 U+E004 + "w" > U+E019
-
-c  ƙ  + y  →  ƙy   (U+E004 + y → U+E009)
 U+E004 + "y" > U+E009
-
-c  f  + y  →  fy   (U+E018 + y → U+E01C)
 U+E018 + "y" > U+E01C
-
-c  h  + w  →  hw   (U+E000 + w → U+E015)
 U+E000 + "w" > U+E015
-
-c  c  + t  →  ct   (U+E012 + t → U+E007)
 U+E012 + "t" > U+E007
 
-c ============================================================
-c  SINGLE CONSONANTS
-c ============================================================
+c CONSONANTS
++ "h"     > U+E000
++ "s"     > U+E001
++ "d"     > U+E002
++ "b"     > U+E003
++ U+0199  > U+E004
++ "g"     > U+E005
++ U+0253  > U+E006
++ "r"     > U+E008
++ "k"     > U+E00A
++ "j"     > U+E00B
++ "t"     > U+E00C
++ U+0257  > U+E00D
++ "n"     > U+E00F
++ "z"     > U+E011
++ "c"     > U+E012
++ "y"     > U+E014
++ "f"     > U+E018
++ "l"     > U+E01A
++ "w"     > U+E01B
++ U+01B4  > U+E01D
++ "m"     > U+E01F
 
-+ "h"        > U+E000
-+ "s"        > U+E001
-+ "d"        > U+E002
-+ "b"        > U+E003
-+ U+0199     > U+E004   c  ƙ  (touch key or copy-paste)
-+ "g"        > U+E005
-+ U+0253     > U+E006   c  ɓ
-+ "r"        > U+E008
-+ "k"        > U+E00A
-+ "j"        > U+E00B
-+ "t"        > U+E00C
-+ U+0257     > U+E00D   c  ɗ
-+ "n"        > U+E00F
-+ "z"        > U+E011
-+ "c"        > U+E012
-+ "y"        > U+E014
-+ "f"        > U+E018
-+ "l"        > U+E01A
-+ "w"        > U+E01B
-+ U+01B4     > U+E01D   c  ƴ
-+ "m"        > U+E01F
-
-c ============================================================
-c  VOWELS  (short and long)
-c ============================================================
-
-+ "a"        > U+E020   c  a
-+ U+0101     > U+E021   c  ā  (a-macron / long a)
-+ "u"        > U+E022   c  u
-+ U+016B     > U+E023   c  ū  (u-macron / long u)
-+ "o"        > U+E024   c  o
-+ U+014D     > U+E025   c  ō  (o-macron / long o)
-+ "i"        > U+E026   c  i
-+ U+012B     > U+E027   c  ī  (i-macron / long i)
-+ "e"        > U+E028   c  e
-+ U+0113     > U+E029   c  ē  (e-macron / long e)
+c VOWELS
++ "a"     > U+E020
++ U+0101  > U+E021
++ "u"     > U+E022
++ U+016B  > U+E023
++ "o"     > U+E024
++ U+014D  > U+E025
++ "i"     > U+E026
++ U+012B  > U+E027
++ "e"     > U+E028
++ U+0113  > U+E029
