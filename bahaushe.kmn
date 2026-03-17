@@ -6,12 +6,14 @@ store(&VERSION)    "10.0"
 store(&NAME)       "BAHAUSHE"
 store(&COPYRIGHT)  "(c) BAHAUSHE Project"
 store(&TARGETS)    "any"
-store(&KMW_RTL) "1"
 store(&LAYOUTFILE) "bahaushe.keyman-touch-layout"
 
 begin Unicode > use(main)
 
 group(main) using keys
+
+c RTL MARK
++ U+200F > U+200F
 
 c DIGRAPH COMPLETION RULES
 U+E001 + "h" > U+E016
@@ -27,36 +29,36 @@ U+E000 + "w" > U+E015
 U+E012 + "t" > U+E007
 
 c CONSONANTS
-+ "h"     > U+E000
-+ "s"     > U+E001
-+ "d"     > U+E002
-+ "b"     > U+E003
-+ U+0199  > U+E004
-+ "g"     > U+E005
-+ U+0253  > U+E006
-+ "r"     > U+E008
-+ "k"     > U+E00A
-+ "j"     > U+E00B
-+ "t"     > U+E00C
-+ U+0257  > U+E00D
-+ "n"     > U+E00F
-+ "z"     > U+E011
-+ "c"     > U+E012
-+ "y"     > U+E014
-+ "f"     > U+E018
-+ "l"     > U+E01A
-+ "w"     > U+E01B
-+ U+01B4  > U+E01D
-+ "m"     > U+E01F
++ "h"    > U+E000
++ "s"    > U+E001
++ "d"    > U+E002
++ "b"    > U+E003
++ U+0199 > U+E004
++ "g"    > U+E005
++ U+0253 > U+E006
++ "r"    > U+E008
++ "k"    > U+E00A
++ "j"    > U+E00B
++ "t"    > U+E00C
++ U+0257 > U+E00D
++ "n"    > U+E00F
++ "z"    > U+E011
++ "c"    > U+E012
++ "y"    > U+E014
++ "f"    > U+E018
++ "l"    > U+E01A
++ "w"    > U+E01B
++ U+01B4 > U+E01D
++ "m"    > U+E01F
 
 c VOWELS
-+ "a"     > U+E020
-+ U+0101  > U+E021
-+ "u"     > U+E022
-+ U+016B  > U+E023
-+ "o"     > U+E024
-+ U+014D  > U+E025
-+ "i"     > U+E026
-+ U+012B  > U+E027
-+ "e"     > U+E028
-+ U+0113  > U+E029
++ "a"    > U+E020
++ U+0101 > U+E021
++ "u"    > U+E022
++ U+016B > U+E023
++ "o"    > U+E024
++ U+014D > U+E025
++ "i"    > U+E026
++ U+012B > U+E027
++ "e"    > U+E028
++ U+0113 > U+E029
