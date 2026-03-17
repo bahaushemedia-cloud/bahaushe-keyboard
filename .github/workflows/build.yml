@@ -18,14 +18,20 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Keyman compiler (kmc)
+      - name: Install Keyman compiler
         run: npm install -g @keymanapp/kmc
 
       - name: Compile keyboard
-        run: kmc build bahaushe.kmn --out-file bahaushe.kmx
+        run: kmc build bahaushe.kmn
 
-      - name: Compile package
-        run: kmc build bahaushe.kps --out-file bahaushe.kmp
+      - name: Build .kmp package manually
+        run: |
+          mkdir -p package
+          cp bahaushe.kmx package/
+          cp bahaushe.keyman-touch-layout package/
+          cp BAHAUSHE.otf package/
+          cp kmp.json package/
+          cd package && zip -r ../bahaushe.kmp .
 
       - name: Upload .kmp as artifact
         uses: actions/upload-artifact@v4
