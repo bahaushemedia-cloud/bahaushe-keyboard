@@ -1,0 +1,19 @@
+{
+  "name": "BAHAUSHE Editor",
+  "short_name": "BAHAUSHE",
+  "description": "BAHAUSHE Script Editor & Keyboard",
+  "start_url": "/bahaushe-keyboard/bahaushe-pwa/",
+  "scope": "/bahaushe-keyboard/bahaushe-pwa/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1c1c1c",
+  "theme_color": "#c0392b",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
