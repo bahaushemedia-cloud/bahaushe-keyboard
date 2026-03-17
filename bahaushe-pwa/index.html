@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ha" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#c0392b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<title>BAHAUSHE Editor</title>
+<style>
+@font-face {
+  font-family:'BAHAUSHE';
+  src:url('data:font/otf;base64,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') format('opentype');
+}
+:root{
+  --bg:#1c1c1c;--surface:#242424;--panel:#2c2c2c;--border:#3a3a3a;
+  --red:#c0392b;--red-dark:#962d22;--red-dim:#4a1510;
+  --text:#e8e0d0;--muted:#5a5a5a;--key:#2e2e2e;--r:5px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:Georgia,serif;overflow:hidden}
+body{display:flex;flex-direction:column;height:100dvh}
+header{background:var(--red);display:flex;align-items:center;justify-content:space-between;padding:0 12px;height:46px;flex-shrink:0}
+.logo{font-family:'BAHAUSHE',serif;font-size:26px;color:#fff;letter-spacing:2px}
+.logo-sub{font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.65);margin-top:1px}
+.hbtns{display:flex;gap:6px}
+.hbtn{background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.25);color:#fff;border-radius:var(--r);padding:5px 11px;font-size:11px;cursor:pointer;font-family:Georgia,serif;letter-spacing:1px;-webkit-tap-highlight-color:transparent}
+.hbtn:active{background:rgba(0,0,0,0.5)}
+.tabs{display:flex;background:var(--surface);border-bottom:2px solid var(--red);flex-shrink:0}
+.tab{flex:1;padding:9px 0;font-size:11px;letter-spacing:1px;text-align:center;color:var(--muted);cursor:pointer;border:none;background:transparent;font-family:Georgia,serif;-webkit-tap-highlight-color:transparent}
+.tab.on{color:var(--red);border-bottom:2px solid var(--red);margin-bottom:-2px}
+.panel{flex:1;display:none;flex-direction:column;overflow:hidden}
+.panel.on{display:flex}
+.doc-meta{display:flex;align-items:center;justify-content:space-between;padding:7px 12px;background:var(--surface);border-bottom:1px solid var(--border);flex-shrink:0}
+.doc-title-input{background:transparent;border:none;color:var(--text);font-size:13px;font-family:Georgia,serif;outline:none;flex:1;-webkit-user-select:text;user-select:text}
+.meta-right{display:flex;gap:8px;align-items:center}
+.char-ct{font-size:10px;color:var(--muted)}
+.save-btn{background:var(--red);border:none;color:#fff;border-radius:var(--r);padding:5px 11px;font-size:11px;cursor:pointer;font-family:Georgia,serif;-webkit-tap-highlight-color:transparent}
+.save-btn:active{background:var(--red-dark)}
+#editor{flex:1;padding:14px;font-family:'BAHAUSHE',serif;font-size:24px;line-height:1.1;color:var(--text);direction:rtl;text-align:right;unicode-bidi:bidi-override;overflow-y:auto;outline:none;caret-color:var(--red);-webkit-user-select:text;user-select:text;background:var(--bg);word-break:break-all}
+#editor:empty::before{content:attr(data-ph);color:var(--muted);font-family:Georgia,serif;font-size:13px;direction:ltr}
+.keyboard{flex-shrink:0;background:var(--panel);border-top:2px solid var(--red);padding:5px 4px 7px}
+.krow{display:flex;gap:3px;margin-bottom:3px;justify-content:center}
+.key{background:var(--key);border:1px solid var(--border);border-radius:var(--r);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;height:40px;flex:1;max-width:50px;-webkit-tap-highlight-color:transparent;position:relative}
+.key:active{background:var(--red-dim);border-color:var(--red)}
+.kg{font-family:'BAHAUSHE',serif;font-size:18px;color:var(--text);line-height:1}
+.kl{font-size:7px;color:var(--muted);margin-top:1px}
+.key.wide{max-width:80px;flex:1.8}
+.key.sp{background:var(--surface);color:var(--muted);font-size:10px;letter-spacing:.5px;max-width:none;flex:3}
+.key.sp:active{background:var(--red-dim)}
+.key.act{background:var(--red-dim);border-color:var(--red);color:var(--red);font-size:10px;letter-spacing:.5px;max-width:70px}
+.key.act:active{background:var(--red)}
+.key.del{color:var(--red);max-width:55px}
+.key.num-act{background:var(--red-dim);border-color:var(--red)}
+.numrow{display:none}
+.numrow.show{display:flex}
+.tbar{background:var(--red);padding:9px 12px;font-size:11px;color:#fff;letter-spacing:1px;flex-shrink:0}
+.tarea{flex:1;padding:12px;background:var(--surface);border:none;border-bottom:1px solid var(--border);color:var(--text);font-size:15px;font-family:Georgia,serif;outline:none;resize:none;direction:ltr;-webkit-user-select:text;user-select:text;min-height:80px;max-height:140px}
+.tarea::placeholder{color:var(--muted)}
+.tconvert-btn{background:var(--red);border:none;color:#fff;padding:13px;font-size:13px;cursor:pointer;font-family:Georgia,serif;letter-spacing:1px;flex-shrink:0}
+.tconvert-btn:active{background:var(--red-dark)}
+.tresult{flex:1;padding:12px;font-family:'BAHAUSHE',serif;font-size:24px;line-height:1.1;color:var(--text);direction:rtl;text-align:right;unicode-bidi:bidi-override;overflow-y:auto;background:var(--bg);word-break:break-all;-webkit-user-select:text;user-select:text}
+.tresult:empty::before{content:"Sakamakon fassara zai bayyana a nan...";color:var(--muted);font-family:Georgia,serif;font-size:13px;direction:ltr}
+.tactions{display:flex;flex-shrink:0}
+.tact-btn{flex:1;background:var(--surface);border:none;border-top:1px solid var(--border);color:var(--muted);padding:11px;font-size:11px;cursor:pointer;font-family:Georgia,serif;letter-spacing:1px;-webkit-tap-highlight-color:transparent}
+.tact-btn:active{background:var(--red-dim);color:var(--red)}
+.saved-header{background:var(--red);padding:10px 12px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.saved-header span{font-size:12px;color:#fff;letter-spacing:1px}
+.saved-list{flex:1;overflow-y:auto}
+.saved-empty{padding:40px 20px;text-align:center;color:var(--muted);font-size:13px;line-height:1.8;direction:ltr}
+.doc-item{background:var(--surface);border-bottom:1px solid var(--border);padding:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;-webkit-tap-highlight-color:transparent}
+.doc-item:active{background:var(--panel)}
+.doc-info{flex:1;min-width:0;direction:ltr}
+.doc-name{font-size:13px;color:var(--text);margin-bottom:4px}
+.doc-preview{font-family:'BAHAUSHE',serif;font-size:14px;color:var(--muted);direction:rtl;unicode-bidi:bidi-override;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.doc-date{font-size:10px;color:var(--muted);margin-top:3px}
+.doc-del{background:var(--red-dim);border:1px solid var(--red-dim);color:var(--red);border-radius:var(--r);padding:5px 9px;font-size:11px;cursor:pointer;-webkit-tap-highlight-color:transparent;font-family:Georgia,serif}
+.doc-del:active{background:var(--red);color:#fff}
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--red);color:#fff;font-size:12px;padding:8px 18px;border-radius:20px;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;font-family:Georgia,serif;z-index:999;direction:ltr}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.vowel-popup{position:fixed;background:var(--surface);border:1px solid var(--red);border-radius:var(--r);z-index:500;padding:4px;display:none;flex-direction:column;gap:3px;box-shadow:0 4px 16px rgba(0,0,0,0.6)}
+.vowel-popup.show{display:flex}
+.vpop-btn{background:var(--key);border:1px solid var(--border);border-radius:var(--r);padding:8px 16px;cursor:pointer;display:flex;flex-direction:column;align-items:center;-webkit-tap-highlight-color:transparent}
+.vpop-btn:active{background:var(--red-dim);border-color:var(--red)}
+.vpop-btn .vg{font-family:'BAHAUSHE',serif;font-size:22px;color:var(--text)}
+.vpop-btn .vl{font-size:9px;color:var(--muted);margin-top:2px;direction:ltr}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="logo" id="logo-glyph"></div>
+    <div class="logo-sub">BAHAUSHE EDITOR</div>
+  </div>
+  <div class="hbtns">
+    <button class="hbtn" onclick="saveJSON()">JSON</button>
+    <button class="hbtn" onclick="newDoc()">SABON</button>
+  </div>
+</header>
+
+<div class="tabs">
+  <button class="tab on" id="tab-write"  onclick="switchTab('write')">RUBUTA</button>
+  <button class="tab"    id="tab-trans"  onclick="switchTab('trans')">FASSARA</button>
+  <button class="tab"    id="tab-saved"  onclick="switchTab('saved')">AJIYE</button>
+</div>
+
+<!-- WRITE -->
+<div class="panel on" id="panel-write">
+  <div class="doc-meta">
+    <input class="doc-title-input" id="doc-title" placeholder="Suna..." value="Sabon Takarda" dir="ltr"/>
+    <div class="meta-right">
+      <span class="char-ct">Haruffa: <span id="charct">0</span></span>
+      <button class="save-btn" onclick="saveDoc()">AJIYE</button>
+    </div>
+  </div>
+  <div id="editor" contenteditable="true" spellcheck="false"
+       inputmode="none" data-ph="Fara rubutu..."></div>
+  <div class="keyboard" id="keyboard"></div>
+</div>
+
+<!-- TRANSLITERATE -->
+<div class="panel" id="panel-trans">
+  <div class="tbar">HAUSA → BAHAUSHE (Fassara)</div>
+  <textarea class="tarea" id="tarea" dir="ltr"
+    placeholder="Rubuta ko liqo rubutun Hausa a nan...&#10;Misali: yaran Hausawa sun shahara matuka"></textarea>
+  <button class="tconvert-btn" onclick="doTranslit()">▶ FASSARA zuwa BAHAUSHE</button>
+  <div class="tresult" id="tresult"></div>
+  <div class="tactions">
+    <button class="tact-btn" onclick="copyTranslit()">KWAFI</button>
+    <button class="tact-btn" onclick="sendToEditor()">→ RUBUTA</button>
+    <button class="tact-btn" onclick="clearTranslit()">SHARE</button>
+  </div>
+</div>
+
+<!-- SAVED -->
+<div class="panel" id="panel-saved">
+  <div class="saved-header">
+    <span>TAKARDUNA AJIYE</span>
+    <span id="doc-count" style="font-size:10px;color:rgba(255,255,255,0.6)"></span>
+  </div>
+  <div class="saved-list" id="saved-list"></div>
+</div>
+
+<!-- Vowel long-press popup -->
+<div class="vowel-popup" id="vowel-popup">
+  <button class="vpop-btn" id="vp-short"><span class="vg"></span><span class="vl">gajere</span></button>
+  <button class="vpop-btn" id="vp-long"><span class="vg"></span><span class="vl">dogu</span></button>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ── Transliteration engine (ported from Python) ───────────────────────────────
+const CONS_MAP = [
+  ["sh","\uE016"],["ts","\uE013"],["ky","\uE00E"],["kw","\uE010"],
+  ["gy","\uE017"],["gw","\uE01E"],["\u0199w","\uE019"],["\u0199y","\uE009"],
+  ["fy","\uE01C"],["hw","\uE015"],["ct","\uE007"],
+  ["h","\uE000"],["s","\uE001"],["d","\uE002"],["b","\uE003"],
+  ["\u0199","\uE004"],["g","\uE005"],["\u0253","\uE006"],["r","\uE008"],
+  ["k","\uE00A"],["j","\uE00B"],["t","\uE00C"],["\u0257","\uE00D"],
+  ["n","\uE00F"],["z","\uE011"],["c","\uE012"],["y","\uE014"],
+  ["f","\uE018"],["l","\uE01A"],["w","\uE01B"],["\u01B4","\uE01D"],["m","\uE01F"]
+];
+const VOWS_MAP = {
+  "a":"\uE020","\u0101":"\uE021","u":"\uE022","\u016B":"\uE023",
+  "o":"\uE024","\u014D":"\uE025","i":"\uE026","\u012B":"\uE027",
+  "e":"\uE028","\u0113":"\uE029"
+};
+const PUNCT_MAP = {",":"\u060C","?":"\u061F",";":"\u061B"};
+
+function transliterate(text) {
+  const t = text.toLowerCase();
+  let out = [], i = 0;
+  while (i < t.length) {
+    if (VOWS_MAP[t[i]]) { out.push(VOWS_MAP[t[i]]); i++; continue; }
+    let matched = false;
+    for (const [lat, pua] of CONS_MAP) {
+      if (t.slice(i, i + lat.length) === lat) {
+        out.push(pua); i += lat.length; matched = true; break;
+      }
+    }
+    if (!matched) {
+      const ch = t[i];
+      if (PUNCT_MAP[ch]) out.push("\u200F" + PUNCT_MAP[ch] + "\u200F");
+      else out.push(ch);
+      i++;
+    }
+  }
+  return out.join('');
+}
+
+// ── Keyboard data ─────────────────────────────────────────────────────────────
+const CONSONANTS = [
+  [0xE000,"h"],[0xE001,"s"],[0xE002,"d"],[0xE003,"b"],
+  [0xE004,"\u0199"],[0xE005,"g"],[0xE006,"\u0253"],[0xE008,"r"],
+  [0xE00A,"k"],[0xE00B,"j"],[0xE00C,"t"],[0xE00D,"\u0257"],
+  [0xE00F,"n"],[0xE011,"z"],[0xE012,"c"],[0xE014,"y"],
+  [0xE018,"f"],[0xE01A,"l"],[0xE01B,"w"],[0xE01D,"\u01B4"],[0xE01F,"m"]
+];
+const DIGRAPHS = [
+  [0xE016,"sh"],[0xE013,"ts"],[0xE00E,"ky"],[0xE010,"kw"],
+  [0xE017,"gy"],[0xE01E,"gw"],[0xE019,"\u0199w"],[0xE009,"\u0199y"],
+  [0xE01C,"fy"],[0xE015,"hw"],[0xE007,"ct"]
+];
+const VOWEL_PAIRS = [
+  [0xE020,"a",0xE021,"\u0101"],
+  [0xE022,"u",0xE023,"\u016B"],
+  [0xE024,"o",0xE025,"\u014D"],
+  [0xE026,"i",0xE027,"\u012B"],
+  [0xE028,"e",0xE029,"\u0113"]
+];
+const NUMS = [
+  ["1","1"],["2","2"],["3","3"],["4","4"],["5","5"],
+  ["6","6"],["7","7"],["8","8"],["9","9"],["0","0"],
+  ["\u060C","\u060C"],["\u061F","\u061F"],["\u061B","\u061B"],
+  [".","."],["!","!"],["?","?"],
+  ["-","-"],["(","("],[")",")"],['"','"'],["'","'"],
+  ["@","@"],["#","#"],["\n","\u23CE"]
+];
+
+// ── App state ─────────────────────────────────────────────────────────────────
+const editor = document.getElementById('editor');
+let numsMode = false;
+let currentDocId = null;
+let activeVowelShort = '', activeVowelLong = '';
+let delInterval = null, delTimeout = null;
+
+// ── Build keyboard ─────────────────────────────────────────────────────────────
+function buildKeyboard() {
+  const kb = document.getElementById('keyboard');
+  kb.innerHTML = '';
+
+  // Row 1 — Vowels (long-press for long vowel)
+  const vrow = div('krow');
+  VOWEL_PAIRS.forEach(([cps, ls, cpl, ll]) => {
+    const short = String.fromCodePoint(cps);
+    const long  = String.fromCodePoint(cpl);
+    const k = key(short, ls, 'wide');
+    let pressTimer;
+    k.addEventListener('pointerdown', e => {
+      e.preventDefault();
+      pressTimer = setTimeout(() => { showVowelPopup(k, short, ls, long, ll); }, 400);
+    });
+    k.addEventListener('pointerup', e => {
+      clearTimeout(pressTimer);
+      if (!document.getElementById('vowel-popup').classList.contains('show')) ins(short);
+    });
+    k.addEventListener('pointerleave', () => clearTimeout(pressTimer));
+    vrow.appendChild(k);
+  });
+  // Backspace in vowel row
+  const bk = key('⌫', '', 'del');
+  attachDel(bk);
+  vrow.appendChild(bk);
+  kb.appendChild(vrow);
+
+  // Rows 2-3 — Consonants (21 keys, split 10+11)
+  const c1 = div('krow'), c2 = div('krow');
+  CONSONANTS.forEach(([cp, label], idx) => {
+    const g = String.fromCodePoint(cp);
+    const k = key(g, label);
+    k.addEventListener('pointerdown', e => { e.preventDefault(); ins(g); });
+    if (idx < 10) c1.appendChild(k);
+    else c2.appendChild(k);
+  });
+  kb.appendChild(c1);
+  kb.appendChild(c2);
+
+  // Row 4 — Digraphs
+  const drow = div('krow');
+  DIGRAPHS.forEach(([cp, label]) => {
+    const g = String.fromCodePoint(cp);
+    const k = key(g, label);
+    k.addEventListener('pointerdown', e => { e.preventDefault(); ins(g); });
+    drow.appendChild(k);
+  });
+  kb.appendChild(drow);
+
+  // Number rows (hidden by default)
+  const nr1 = div('krow numrow'), nr2 = div('krow numrow');
+  NUMS.forEach(([ch, disp], idx) => {
+    const k = document.createElement('div');
+    k.className = 'key';
+    k.style.fontSize = '14px';
+    k.style.fontFamily = 'Georgia,serif';
+    k.style.color = 'var(--text)';
+    k.style.maxWidth = '40px';
+    k.textContent = disp;
+    k.addEventListener('pointerdown', e => { e.preventDefault(); ins(ch); });
+    if (idx < 12) nr1.appendChild(k);
+    else nr2.appendChild(k);
+  });
+  kb.appendChild(nr1);
+  kb.appendChild(nr2);
+
+  // Bottom utility row
+  const urow = div('krow');
+
+  const rtlBtn = keyLabel('\u25C4RTL', 'act');
+  rtlBtn.addEventListener('pointerdown', e => { e.preventDefault(); ins('\u200F'); });
+  urow.appendChild(rtlBtn);
+
+  const mvL = keyLabel('←');
+  mvL.addEventListener('pointerdown', e => { e.preventDefault(); mv(-1); });
+  urow.appendChild(mvL);
+
+  const mvR = keyLabel('→');
+  mvR.addEventListener('pointerdown', e => { e.preventDefault(); mv(1); });
+  urow.appendChild(mvR);
+
+  const spBtn = keyLabel('SARARI', 'sp');
+  spBtn.addEventListener('pointerdown', e => { e.preventDefault(); ins(' '); });
+  urow.appendChild(spBtn);
+
+  const numBtn = keyLabel('123', 'act');
+  numBtn.id = 'num-tog';
+  numBtn.addEventListener('pointerdown', e => { e.preventDefault(); toggleNums(); });
+  urow.appendChild(numBtn);
+
+  const delBtn = keyLabel('⌫', 'del');
+  attachDel(delBtn);
+  urow.appendChild(delBtn);
+
+  kb.appendChild(urow);
+}
+
+function div(cls) {
+  const d = document.createElement('div');
+  d.className = cls;
+  return d;
+}
+
+function key(glyph, label, extra) {
+  const k = document.createElement('div');
+  k.className = 'key' + (extra ? ' ' + extra : '');
+  k.innerHTML = '<span class="kg">' + glyph + '</span>' +
+                (label ? '<span class="kl">' + label + '</span>' : '');
+  return k;
+}
+
+function keyLabel(text, extra) {
+  const k = document.createElement('div');
+  k.className = 'key' + (extra ? ' ' + extra : '');
+  k.style.fontFamily = 'Georgia,serif';
+  k.style.fontSize = '10px';
+  k.style.letterSpacing = '.5px';
+  k.textContent = text;
+  return k;
+}
+
+function attachDel(btn) {
+  btn.addEventListener('pointerdown', e => {
+    e.preventDefault();
+    del();
+    delTimeout = setTimeout(() => {
+      delInterval = setInterval(del, 60);
+    }, 400);
+  });
+  btn.addEventListener('pointerup', stopDel);
+  btn.addEventListener('pointerleave', stopDel);
+}
+
+// ── Vowel popup ───────────────────────────────────────────────────────────────
+function showVowelPopup(keyEl, short, shortLabel, long, longLabel) {
+  const popup = document.getElementById('vowel-popup');
+  const rect  = keyEl.getBoundingClientRect();
+  document.querySelector('#vp-short .vg').textContent = short;
+  document.querySelector('#vp-short .vl').textContent = shortLabel + ' (gajere)';
+  document.querySelector('#vp-long .vg').textContent  = long;
+  document.querySelector('#vp-long .vl').textContent  = longLabel + ' (dogu)';
+  document.getElementById('vp-short').onclick = () => { ins(short); closeVowelPopup(); };
+  document.getElementById('vp-long').onclick  = () => { ins(long);  closeVowelPopup(); };
+  popup.style.bottom = (window.innerHeight - rect.top + 4) + 'px';
+  popup.style.left   = Math.max(4, rect.left - 10) + 'px';
+  popup.classList.add('show');
+}
+
+function closeVowelPopup() {
+  document.getElementById('vowel-popup').classList.remove('show');
+}
+
+document.addEventListener('pointerdown', e => {
+  if (!e.target.closest('#vowel-popup') && !e.target.closest('.key.wide')) closeVowelPopup();
+});
+
+// ── Num toggle ────────────────────────────────────────────────────────────────
+function toggleNums() {
+  numsMode = !numsMode;
+  const tog  = document.getElementById('num-tog');
+  const rows = document.querySelectorAll('.numrow');
+  const krows = document.querySelectorAll('.krow:not(.numrow)');
+  if (numsMode) {
+    tog.textContent = 'ABC';
+    tog.classList.add('num-act');
+    rows.forEach(r => r.classList.add('show'));
+    // hide consonant/vowel/digraph rows (keep utility row)
+    let count = 0;
+    krows.forEach(r => { if (count < 4) { r.style.display='none'; count++; } });
+  } else {
+    tog.textContent = '123';
+    tog.classList.remove('num-act');
+    rows.forEach(r => r.classList.remove('show'));
+    krows.forEach(r => r.style.display = '');
+  }
+}
+
+// ── Text insertion ────────────────────────────────────────────────────────────
+function ins(ch) {
+  editor.focus();
+  const sel = window.getSelection();
+  if (sel && sel.rangeCount) {
+    const r = sel.getRangeAt(0);
+    r.deleteContents();
+    const n = document.createTextNode(ch);
+    r.insertNode(n);
+    r.setStartAfter(n); r.collapse(true);
+    sel.removeAllRanges(); sel.addRange(r);
+  } else {
+    editor.textContent += ch;
+  }
+  updateCount();
+}
+
+function del() {
+  editor.focus();
+  const sel = window.getSelection();
+  if (!sel || !sel.rangeCount) return;
+  const r = sel.getRangeAt(0);
+  if (!r.collapsed) { r.deleteContents(); }
+  else {
+    try {
+      const nr = r.cloneRange();
+      nr.setStart(r.startContainer, Math.max(0, r.startOffset - 1));
+      nr.deleteContents();
+    } catch(e) {}
+  }
+  updateCount();
+}
+
+function stopDel() {
+  clearTimeout(delTimeout); clearInterval(delInterval);
+  delTimeout = null; delInterval = null;
+}
+
+function mv(d) {
+  editor.focus();
+  const sel = window.getSelection();
+  if (!sel || !sel.rangeCount) return;
+  const r = sel.getRangeAt(0);
+  try {
+    r.setStart(r.startContainer, Math.max(0, r.startOffset + d));
+    r.collapse(true);
+    sel.removeAllRanges(); sel.addRange(r);
+  } catch(e) {}
+}
+
+function updateCount() {
+  document.getElementById('charct').textContent = [...(editor.textContent||'')].length;
+}
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+function switchTab(name) {
+  ['write','trans','saved'].forEach(n => {
+    document.getElementById('tab-' + n).classList.remove('on');
+    document.getElementById('panel-' + n).classList.remove('on');
+  });
+  document.getElementById('tab-' + name).classList.add('on');
+  document.getElementById('panel-' + name).classList.add('on');
+  if (name === 'saved') loadSaved();
+  if (name === 'write') editor.focus();
+}
+
+// ── Transliterate tab ─────────────────────────────────────────────────────────
+function doTranslit() {
+  const text = document.getElementById('tarea').value.trim();
+  if (!text) { toast('Rubuta rubutu da farko'); return; }
+  document.getElementById('tresult').textContent = transliterate(text);
+}
+
+async function copyTranslit() {
+  const t = document.getElementById('tresult').textContent;
+  if (!t) { toast('Babu sakamakon fassara'); return; }
+  try { await navigator.clipboard.writeText(t); toast('An kwafi!'); }
+  catch(e) { toast('Kwafi ya kasa'); }
+}
+
+function sendToEditor() {
+  const t = document.getElementById('tresult').textContent;
+  if (!t) { toast('Babu sakamakon fassara'); return; }
+  editor.textContent += t;
+  updateCount();
+  switchTab('write');
+  toast('An aika wa rubutu');
+}
+
+function clearTranslit() {
+  document.getElementById('tarea').value = '';
+  document.getElementById('tresult').textContent = '';
+}
+
+// ── Save / Load ───────────────────────────────────────────────────────────────
+function saveDoc() {
+  const title   = document.getElementById('doc-title').value.trim() || 'Sabon Takarda';
+  const content = editor.textContent || '';
+  if (!content) { toast('Takarda fata ce - rubuta wani abu'); return; }
+  let docs = getDocs();
+  const now = new Date().toLocaleDateString();
+  if (currentDocId) {
+    const idx = docs.findIndex(d => d.id === currentDocId);
+    if (idx > -1) docs[idx] = {...docs[idx], title, content, date: now};
+  } else {
+    currentDocId = Date.now().toString();
+    docs.unshift({id: currentDocId, title, content, date: now});
+    if (docs.length > 50) docs.pop();
+  }
+  localStorage.setItem('bahaushe_docs', JSON.stringify(docs));
+  toast('An ajiye \u2713');
+}
+
+function getDocs() {
+  try { return JSON.parse(localStorage.getItem('bahaushe_docs') || '[]'); }
+  catch(e) { return []; }
+}
+
+function loadSaved() {
+  const docs = getDocs();
+  const list = document.getElementById('saved-list');
+  document.getElementById('doc-count').textContent = docs.length + ' takarda';
+  if (!docs.length) {
+    list.innerHTML = '<div class="saved-empty">Babu takardun da aka ajiye tukuna.<br><br>Rubuta wani abu kuma ka danna AJIYE.</div>';
+    return;
+  }
+  list.innerHTML = '';
+  docs.forEach(doc => {
+    const item = document.createElement('div');
+    item.className = 'doc-item';
+    const preview = (doc.content || '').slice(0, 28);
+    item.innerHTML =
+      '<div class="doc-info">' +
+        '<div class="doc-name">' + esc(doc.title) + '</div>' +
+        '<div class="doc-preview">' + esc(preview) + '</div>' +
+        '<div class="doc-date">' + doc.date + '</div>' +
+      '</div>' +
+      '<button class="doc-del" data-id="' + doc.id + '">\u2715</button>';
+    item.querySelector('.doc-del').addEventListener('pointerdown', e => {
+      e.stopPropagation(); deleteDoc(doc.id);
+    });
+    item.addEventListener('click', () => openDoc(doc.id));
+    list.appendChild(item);
+  });
+}
+
+function openDoc(id) {
+  const doc = getDocs().find(d => d.id === id);
+  if (!doc) return;
+  currentDocId = id;
+  document.getElementById('doc-title').value = doc.title;
+  editor.textContent = doc.content || '';
+  updateCount();
+  switchTab('write');
+  toast('Takarda tana bude');
+}
+
+function deleteDoc(id) {
+  const docs = getDocs().filter(d => d.id !== id);
+  localStorage.setItem('bahaushe_docs', JSON.stringify(docs));
+  if (currentDocId === id) currentDocId = null;
+  loadSaved();
+  toast('An share takarda');
+}
+
+function newDoc() {
+  currentDocId = null;
+  document.getElementById('doc-title').value = 'Sabon Takarda';
+  editor.textContent = '';
+  updateCount();
+  switchTab('write');
+  editor.focus();
+  toast('Sabon takarda');
+}
+
+// ── JSON export ───────────────────────────────────────────────────────────────
+function saveJSON() {
+  const title    = document.getElementById('doc-title').value.trim() || 'Sabon Takarda';
+  const bahaushe = editor.textContent || '';
+  if (!bahaushe) { toast('Rubuta wani abu da farko'); return; }
+  const obj = {
+    meta: { title, version:'1.0', script:'BAHAUSHE', pua_range:'U+E000-U+E029', date: new Date().toISOString() },
+    content: {
+      bahaushe,
+      codepoints: Array.from(bahaushe).map(c => 'U+' + c.codePointAt(0).toString(16).toUpperCase().padStart(4,'0'))
+    }
+  };
+  const blob = new Blob([JSON.stringify(obj, null, 2)], {type:'application/json'});
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url; a.download = title.replace(/\s+/g,'_') + '.bahaushe.json';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a); URL.revokeObjectURL(url);
+  toast('JSON an sauke \u2193');
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function esc(s) {
+  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+let toastTimer;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2200);
+}
+
+// ── Logo ──────────────────────────────────────────────────────────────────────
+function buildLogo() {
+  document.getElementById('logo-glyph').textContent =
+    String.fromCodePoint(0xE003) + String.fromCodePoint(0xE000);
+}
+
+// ── PWA service worker ────────────────────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js');
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+buildLogo();
+buildKeyboard();
+editor.addEventListener('input', updateCount);
+editor.focus();
+</script>
+</body>
+</html>
