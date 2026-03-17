@@ -66,13 +66,14 @@
           {
             "id": 5,
             "key": [
-              {"id":"U_200F","text":"\u25C4RTL","width":140,"sp":"1"},
-              {"id":"K_SPACE","text":" ","width":330},
-              {"id":"K_PERIOD","text":".","width":75},
-              {"id":"U_060C","text":"\u060C","width":75},
-              {"id":"U_061F","text":"\u061F","width":75},
-              {"id":"T_NUMS","text":"123","nextlayer":"numbers","width":130,"sp":"1"},
-              {"id":"K_ENTER","text":"*Enter*","width":150,"sp":"1"}
+              {"id":"K_LOPT","text":"*Menu*","width":130,"sp":"1"},
+              {"id":"U_200F","text":"\u25C4RTL","width":120,"sp":"1"},
+              {"id":"K_SPACE","text":" ","width":280},
+              {"id":"K_PERIOD","text":".","width":70},
+              {"id":"U_060C","text":"\u060C","width":70},
+              {"id":"U_061F","text":"\u061F","width":70},
+              {"id":"T_NUMS","text":"123","nextlayer":"numbers","width":120,"sp":"1"},
+              {"id":"K_ENTER","text":"*Enter*","width":140,"sp":"1"}
             ]
           }
         ]
@@ -105,17 +106,19 @@
               {"id":"K_COMMA","text":",","width":100},
               {"id":"U_0021","text":"!","width":100},
               {"id":"K_HYPHEN","text":"-","width":100},
-              {"id":"K_LPAR","text":"(","width":100},
-              {"id":"K_RPAR","text":")","width":100},
+              {"id":"U_0028","text":"(","width":100},
+              {"id":"U_0029","text":")","width":100},
               {"id":"K_BKSP","text":"*BkSp*","width":100,"sp":"1"}
             ]
           },
           {
             "id": 3,
             "key": [
-              {"id":"T_BACK","text":"ABC","nextlayer":"default","width":200,"sp":"1"},
-              {"id":"K_SPACE","text":" ","width":400},
-              {"id":"K_ENTER","text":"*Enter*","width":200,"sp":"1"}
+              {"id":"K_LOPT","text":"*Menu*","width":130,"sp":"1"},
+              {"id":"T_BACK","text":"ABC","nextlayer":"default","width":170,"sp":"1"},
+              {"id":"K_SPACE","text":" ","width":370},
+              {"id":"K_ENTER","text":"*Enter*","width":170,"sp":"1"},
+              {"id":"K_BKSP","text":"*BkSp*","width":130,"sp":"1"}
             ]
           }
         ]
