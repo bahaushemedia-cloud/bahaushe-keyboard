@@ -1,0 +1,166 @@
+{
+  "phone": {
+    "font": "BAHAUSHE",
+    "layer": [
+      {
+        "id": "default",
+        "row": [
+          {
+            "id": 1,
+            "key": [
+              {"id": "K_H",    "text": "h",  "width": 90},
+              {"id": "K_S",    "text": "s",  "width": 90},
+              {"id": "K_D",    "text": "d",  "width": 90},
+              {"id": "K_B",    "text": "b",  "width": 90},
+              {"id": "U_0199", "text": "ƙ",  "width": 90},
+              {"id": "K_G",    "text": "g",  "width": 90},
+              {"id": "U_0253", "text": "ɓ",  "width": 90},
+              {"id": "K_R",    "text": "r",  "width": 90},
+              {"id": "K_K",    "text": "k",  "width": 90},
+              {"id": "K_J",    "text": "j",  "width": 90},
+              {"id": "K_BKSP","text": "*BkSp*","width": 110,"sp": "1"}
+            ]
+          },
+          {
+            "id": 2,
+            "key": [
+              {"id": "K_T",    "text": "t",  "width": 100},
+              {"id": "U_0257", "text": "ɗ",  "width": 100},
+              {"id": "K_N",    "text": "n",  "width": 100},
+              {"id": "K_Z",    "text": "z",  "width": 100},
+              {"id": "K_C",    "text": "c",  "width": 100},
+              {"id": "K_Y",    "text": "y",  "width": 100},
+              {"id": "K_F",    "text": "f",  "width": 100},
+              {"id": "K_L",    "text": "l",  "width": 100},
+              {"id": "K_W",    "text": "w",  "width": 100},
+              {"id": "K_M",    "text": "m",  "width": 100}
+            ]
+          },
+          {
+            "id": 3,
+            "key": [
+              {"id": "U_01B4", "text": "ƴ",      "width": 130},
+              {"id": "T_VOWELS","text": "Vowels", "nextlayer": "vowels","width": 200,"sp": "1"},
+              {"id": "K_SPACE","text": " ",       "width": 340},
+              {"id": "K_PERIOD","text": ".",      "width": 130},
+              {"id": "K_ENTER","text": "*Enter*", "width": 200,"sp": "1"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vowels",
+        "row": [
+          {
+            "id": 1,
+            "key": [
+              {"id": "K_A",    "text": "a",  "width": 100},
+              {"id": "U_0101", "text": "ā",  "width": 100},
+              {"id": "K_U",    "text": "u",  "width": 100},
+              {"id": "U_016B", "text": "ū",  "width": 100},
+              {"id": "K_O",    "text": "o",  "width": 100},
+              {"id": "U_014D", "text": "ō",  "width": 100},
+              {"id": "K_I",    "text": "i",  "width": 100},
+              {"id": "U_012B", "text": "ī",  "width": 100},
+              {"id": "K_E",    "text": "e",  "width": 100},
+              {"id": "U_0113", "text": "ē",  "width": 100}
+            ]
+          },
+          {
+            "id": 2,
+            "key": [
+              {"id": "T_CONS", "text": "Cons",    "nextlayer": "default","width": 200,"sp": "1"},
+              {"id": "K_SPACE","text": " ",        "width": 400},
+              {"id": "K_BKSP","text": "*BkSp*",   "width": 200,"sp": "1"},
+              {"id": "K_ENTER","text": "*Enter*",  "width": 200,"sp": "1"}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tablet": {
+    "font": "BAHAUSHE",
+    "layer": [
+      {
+        "id": "default",
+        "row": [
+          {
+            "id": 1,
+            "key": [
+              {"id": "K_H",    "text": "h",  "width": 80},
+              {"id": "K_S",    "text": "s",  "width": 80},
+              {"id": "K_D",    "text": "d",  "width": 80},
+              {"id": "K_B",    "text": "b",  "width": 80},
+              {"id": "U_0199", "text": "ƙ",  "width": 80},
+              {"id": "K_G",    "text": "g",  "width": 80},
+              {"id": "U_0253", "text": "ɓ",  "width": 80},
+              {"id": "K_R",    "text": "r",  "width": 80},
+              {"id": "K_K",    "text": "k",  "width": 80},
+              {"id": "K_J",    "text": "j",  "width": 80},
+              {"id": "K_T",    "text": "t",  "width": 80},
+              {"id": "U_0257", "text": "ɗ",  "width": 80},
+              {"id": "K_BKSP","text": "*BkSp*","width": 120,"sp": "1"}
+            ]
+          },
+          {
+            "id": 2,
+            "key": [
+              {"id": "K_N",    "text": "n",  "width": 90},
+              {"id": "K_Z",    "text": "z",  "width": 90},
+              {"id": "K_C",    "text": "c",  "width": 90},
+              {"id": "K_Y",    "text": "y",  "width": 90},
+              {"id": "K_F",    "text": "f",  "width": 90},
+              {"id": "K_L",    "text": "l",  "width": 90},
+              {"id": "K_W",    "text": "w",  "width": 90},
+              {"id": "K_M",    "text": "m",  "width": 90},
+              {"id": "U_01B4", "text": "ƴ",  "width": 90},
+              {"id": "K_ENTER","text": "*Enter*","width": 180,"sp": "1"}
+            ]
+          },
+          {
+            "id": 3,
+            "key": [
+              {"id": "T_VOWELS","text": "Vowels","nextlayer": "vowels","width": 200,"sp": "1"},
+              {"id": "K_A",    "text": "a",  "width": 90},
+              {"id": "K_U",    "text": "u",  "width": 90},
+              {"id": "K_O",    "text": "o",  "width": 90},
+              {"id": "K_I",    "text": "i",  "width": 90},
+              {"id": "K_E",    "text": "e",  "width": 90},
+              {"id": "K_SPACE","text": " ",  "width": 350}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vowels",
+        "row": [
+          {
+            "id": 1,
+            "key": [
+              {"id": "K_A",    "text": "a",  "width": 100},
+              {"id": "U_0101", "text": "ā",  "width": 100},
+              {"id": "K_U",    "text": "u",  "width": 100},
+              {"id": "U_016B", "text": "ū",  "width": 100},
+              {"id": "K_O",    "text": "o",  "width": 100},
+              {"id": "U_014D", "text": "ō",  "width": 100},
+              {"id": "K_I",    "text": "i",  "width": 100},
+              {"id": "U_012B", "text": "ī",  "width": 100},
+              {"id": "K_E",    "text": "e",  "width": 100},
+              {"id": "U_0113", "text": "ē",  "width": 100}
+            ]
+          },
+          {
+            "id": 2,
+            "key": [
+              {"id": "T_CONS", "text": "Cons",   "nextlayer": "default","width": 200,"sp": "1"},
+              {"id": "K_SPACE","text": " ",       "width": 400},
+              {"id": "K_BKSP","text": "*BkSp*",  "width": 200,"sp": "1"},
+              {"id": "K_ENTER","text": "*Enter*", "width": 200,"sp": "1"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

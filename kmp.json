@@ -1,0 +1,37 @@
+{
+  "system": {
+    "fileVersion": "7.0",
+    "keymanDeveloperVersion": "17.0.0"
+  },
+  "options": {
+    "readmeFile": "README.md"
+  },
+  "info": {
+    "name":      { "description": "BAHAUSHE" },
+    "version":   { "description": "1.0" },
+    "copyright": { "description": "(c) BAHAUSHE Project" },
+    "author":    { "description": "BAHAUSHE Project" }
+  },
+  "files": [
+    { "name": "bahaushe.kmx",                    "description": "BAHAUSHE Keyboard (compiled)" },
+    { "name": "bahaushe.keyman-touch-layout",    "description": "Touch Layout" },
+    { "name": "BAHAUSHE.otf",                    "description": "BAHAUSHE Font" },
+    { "name": "README.md",                       "description": "Instructions" }
+  ],
+  "keyboards": [
+    {
+      "name": "BAHAUSHE",
+      "id": "bahaushe",
+      "version": "1.0",
+      "languages": [
+        { "name": "Hausa", "id": "ha" }
+      ],
+      "fonts": [
+        {
+          "family": "BAHAUSHE",
+          "source": ["BAHAUSHE.otf"]
+        }
+      ]
+    }
+  ]
+}

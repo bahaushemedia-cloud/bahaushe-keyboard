@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+  <System>
+    <KeymanDeveloperVersion>17.0.0.0</KeymanDeveloperVersion>
+    <FileVersion>7.0</FileVersion>
+  </System>
+  <Options>
+    <FollowKeyboardVersion/>
+  </Options>
+  <Info>
+    <Name DefaultValue="BAHAUSHE"/>
+    <Copyright DefaultValue="(c) BAHAUSHE Project"/>
+    <Version DefaultValue="1.0"/>
+  </Info>
+  <Files>
+    <File>
+      <Name>bahaushe.kmx</Name>
+      <Description>BAHAUSHE Keyboard</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.kmx</FileType>
+    </File>
+    <File>
+      <Name>bahaushe.js</Name>
+      <Description>BAHAUSHE Keyboard (Web/Touch)</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.js</FileType>
+    </File>
+    <File>
+      <Name>bahaushe.keyman-touch-layout</Name>
+      <Description>Touch Layout</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.keyman-touch-layout</FileType>
+    </File>
+    <File>
+      <Name>BAHAUSHE.otf</Name>
+      <Description>BAHAUSHE Font</Description>
+      <CopyLocation>0</CopyLocation>
+      <FileType>.otf</FileType>
+    </File>
+  </Files>
+  <Keyboards>
+    <Keyboard>
+      <Name>BAHAUSHE</Name>
+      <ID>bahaushe</ID>
+      <Version>1.0</Version>
+      <RTL/>
+      <Languages>
+        <Language ID="ha" Name="Hausa"/>
+      </Languages>
+      <Fonts>
+        <Font Filename="BAHAUSHE.otf" Name="BAHAUSHE"/>
+      </Fonts>
+    </Keyboard>
+  </Keyboards>
+</Package>
