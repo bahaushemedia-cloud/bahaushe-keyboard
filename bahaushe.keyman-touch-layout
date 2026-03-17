@@ -1,4 +1,4 @@
-{
+          {
   "phone": {
     "font": "BAHAUSHE",
     "layer": [
@@ -24,82 +24,55 @@
           {
             "id": 2,
             "key": [
-              {"id": "U_E00C", "text": "\uE00C", "width": 100},
-              {"id": "U_E00D", "text": "\uE00D", "width": 100},
-              {"id": "U_E00F", "text": "\uE00F", "width": 100},
-              {"id": "U_E011", "text": "\uE011", "width": 100},
-              {"id": "U_E012", "text": "\uE012", "width": 100},
-              {"id": "U_E014", "text": "\uE014", "width": 100},
-              {"id": "U_E018", "text": "\uE018", "width": 100},
-              {"id": "U_E01A", "text": "\uE01A", "width": 100},
-              {"id": "U_E01B", "text": "\uE01B", "width": 100},
-              {"id": "U_E01F", "text": "\uE01F", "width": 100}
+              {"id": "U_E00C", "text": "\uE00C", "width": 95},
+              {"id": "U_E00D", "text": "\uE00D", "width": 95},
+              {"id": "U_E00F", "text": "\uE00F", "width": 95},
+              {"id": "U_E011", "text": "\uE011", "width": 95},
+              {"id": "U_E012", "text": "\uE012", "width": 95},
+              {"id": "U_E014", "text": "\uE014", "width": 95},
+              {"id": "U_E018", "text": "\uE018", "width": 95},
+              {"id": "U_E01A", "text": "\uE01A", "width": 95},
+              {"id": "U_E01B", "text": "\uE01B", "width": 95},
+              {"id": "U_E01F", "text": "\uE01F", "width": 95},
+              {"id": "U_E01D", "text": "\uE01D", "width": 95}
             ]
           },
           {
             "id": 3,
             "key": [
-              {"id": "U_E01D", "text": "\uE01D", "width": 100},
-              {"id": "T_MORE", "text": "more", "nextlayer": "digraphs", "width": 150, "sp": "1"},
-              {"id": "T_VOWS", "text": "vowels", "nextlayer": "vowels", "width": 150, "sp": "1"},
-              {"id": "K_SPACE", "text": " ", "width": 250},
-              {"id": "K_ENTER", "text": "*Enter*", "width": 160, "sp": "1"}
-            ]
-          }
-        ]
-      },
-      {
-        "id": "vowels",
-        "row": [
-          {
-            "id": 1,
-            "key": [
-              {"id": "U_E020", "text": "\uE020", "width": 100},
-              {"id": "U_E021", "text": "\uE021", "width": 100},
-              {"id": "U_E022", "text": "\uE022", "width": 100},
-              {"id": "U_E023", "text": "\uE023", "width": 100},
-              {"id": "U_E024", "text": "\uE024", "width": 100},
-              {"id": "U_E025", "text": "\uE025", "width": 100},
-              {"id": "U_E026", "text": "\uE026", "width": 100},
-              {"id": "U_E027", "text": "\uE027", "width": 100},
-              {"id": "U_E028", "text": "\uE028", "width": 100},
-              {"id": "U_E029", "text": "\uE029", "width": 100}
+              {"id": "U_E016", "text": "\uE016", "width": 95},
+              {"id": "U_E013", "text": "\uE013", "width": 95},
+              {"id": "U_E00E", "text": "\uE00E", "width": 95},
+              {"id": "U_E010", "text": "\uE010", "width": 95},
+              {"id": "U_E017", "text": "\uE017", "width": 95},
+              {"id": "U_E01E", "text": "\uE01E", "width": 95},
+              {"id": "U_E019", "text": "\uE019", "width": 95},
+              {"id": "U_E009", "text": "\uE009", "width": 95},
+              {"id": "U_E01C", "text": "\uE01C", "width": 95},
+              {"id": "U_E015", "text": "\uE015", "width": 95},
+              {"id": "U_E007", "text": "\uE007", "width": 95}
             ]
           },
           {
-            "id": 2,
+            "id": 4,
             "key": [
-              {"id": "T_CONS", "text": "cons", "nextlayer": "default", "width": 200, "sp": "1"},
-              {"id": "K_SPACE", "text": " ", "width": 400},
-              {"id": "K_BKSP", "text": "*BkSp*", "width": 200, "sp": "1"}
-            ]
-          }
-        ]
-      },
-      {
-        "id": "digraphs",
-        "row": [
-          {
-            "id": 1,
-            "key": [
-              {"id": "U_E016", "text": "\uE016", "width": 100},
-              {"id": "U_E013", "text": "\uE013", "width": 100},
-              {"id": "U_E00E", "text": "\uE00E", "width": 100},
-              {"id": "U_E010", "text": "\uE010", "width": 100},
-              {"id": "U_E017", "text": "\uE017", "width": 100},
-              {"id": "U_E01E", "text": "\uE01E", "width": 100},
-              {"id": "U_E019", "text": "\uE019", "width": 100},
-              {"id": "U_E009", "text": "\uE009", "width": 100},
-              {"id": "U_E01C", "text": "\uE01C", "width": 100},
-              {"id": "U_E015", "text": "\uE015", "width": 100},
-              {"id": "U_E007", "text": "\uE007", "width": 100}
+              {"id": "U_E020", "text": "\uE020", "width": 95},
+              {"id": "U_E021", "text": "\uE021", "width": 95},
+              {"id": "U_E022", "text": "\uE022", "width": 95},
+              {"id": "U_E023", "text": "\uE023", "width": 95},
+              {"id": "U_E024", "text": "\uE024", "width": 95},
+              {"id": "U_E025", "text": "\uE025", "width": 95},
+              {"id": "U_E026", "text": "\uE026", "width": 95},
+              {"id": "U_E027", "text": "\uE027", "width": 95},
+              {"id": "U_E028", "text": "\uE028", "width": 95},
+              {"id": "U_E029", "text": "\uE029", "width": 95}
             ]
           },
           {
-            "id": 2,
+            "id": 5,
             "key": [
-              {"id": "T_BACK", "text": "back", "nextlayer": "default", "width": 200, "sp": "1"},
-              {"id": "K_SPACE", "text": " ", "width": 400},
+              {"id": "K_SPACE", "text": " ", "width": 600},
+              {"id": "K_ENTER", "text": "*Enter*", "width": 200, "sp": "1"},
               {"id": "K_BKSP", "text": "*BkSp*", "width": 200, "sp": "1"}
             ]
           }
@@ -107,4 +80,4 @@
       }
     ]
   }
-}
+}  
