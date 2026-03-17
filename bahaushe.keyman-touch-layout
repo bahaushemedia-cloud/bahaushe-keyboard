@@ -1,4 +1,4 @@
-          {
+{
   "phone": {
     "font": "BAHAUSHE",
     "layer": [
@@ -71,13 +71,16 @@
           {
             "id": 5,
             "key": [
-              {"id": "K_SPACE", "text": " ", "width": 600},
-              {"id": "K_ENTER", "text": "*Enter*", "width": 200, "sp": "1"},
-              {"id": "K_BKSP", "text": "*BkSp*", "width": 200, "sp": "1"}
+              {"id": "U_200F", "text": "\u200F\u25C4", "width": 120, "sp": "1"},
+              {"id": "K_SPACE", "text": " ", "width": 350},
+              {"id": "K_PERIOD", "text": ".", "width": 90},
+              {"id": "U_060C", "text": "\u060C", "width": 90},
+              {"id": "U_061F", "text": "\u061F", "width": 90},
+              {"id": "K_ENTER", "text": "*Enter*", "width": 160, "sp": "1"}
             ]
           }
         ]
       }
     ]
   }
-}  
+}
