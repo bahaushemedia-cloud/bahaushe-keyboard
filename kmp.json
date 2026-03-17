@@ -3,35 +3,34 @@
     "fileVersion": "7.0",
     "keymanDeveloperVersion": "17.0.0"
   },
-  "options": {
-    "readmeFile": "README.md"
-  },
+  "options": {},
   "info": {
-    "name":      { "description": "BAHAUSHE" },
-    "version":   { "description": "1.0" },
-    "copyright": { "description": "(c) BAHAUSHE Project" },
-    "author":    { "description": "BAHAUSHE Project" }
+    "name": { "description": "BAHAUSHE" },
+    "version": { "description": "1.0" },
+    "copyright": { "description": "(c) BAHAUSHE Project" }
   },
   "files": [
-    { "name": "bahaushe.kmx",                    "description": "BAHAUSHE Keyboard (compiled)" },
-    { "name": "bahaushe.keyman-touch-layout",    "description": "Touch Layout" },
-    { "name": "BAHAUSHE.otf",                    "description": "BAHAUSHE Font" },
-    { "name": "README.md",                       "description": "Instructions" }
+    { "name": "bahaushe.kmx", "description": "BAHAUSHE Keyboard" },
+    { "name": "bahaushe.js", "description": "BAHAUSHE Keyboard Web" },
+    { "name": "bahaushe.keyman-touch-layout", "description": "Touch Layout" },
+    { "name": "BAHAUSHE.otf", "description": "BAHAUSHE Font" }
   ],
   "keyboards": [
     {
       "name": "BAHAUSHE",
       "id": "bahaushe",
       "version": "1.0",
+      "oskFont": "BAHAUSHE.otf",
+      "displayFont": "BAHAUSHE.otf",
       "languages": [
         { "name": "Hausa", "id": "ha" }
-      ],
-      "fonts": [
-        {
-          "family": "BAHAUSHE",
-          "source": ["BAHAUSHE.otf"]
-        }
       ]
+    }
+  ],
+  "fonts": [
+    {
+      "family": "BAHAUSHE",
+      "source": ["BAHAUSHE.otf"]
     }
   ]
 }
