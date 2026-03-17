@@ -24,10 +24,14 @@ jobs:
       - name: Compile keyboard
         run: kmc build bahaushe.kmn
 
+      - name: List compiled files
+        run: ls -la
+
       - name: Build .kmp package manually
         run: |
           mkdir -p package
           cp bahaushe.kmx package/
+          cp bahaushe.js package/
           cp bahaushe.keyman-touch-layout package/
           cp BAHAUSHE.otf package/
           cp kmp.json package/
